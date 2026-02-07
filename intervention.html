@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SF-SC Intervention</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="intervention-page">
+  <!-- Subtle background decorative lines -->
+  <svg class="bg-lines" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,120 C360,200 720,40 1080,120 C1260,160 1380,80 1440,120" fill="none" stroke="#C5C6E8" stroke-width="1.5"/>
+    <path d="M0,300 C400,220 800,380 1200,280 C1360,250 1420,320 1440,300" fill="none" stroke="#D0D1F0" stroke-width="1"/>
+    <path d="M0,500 C320,560 640,440 960,520 C1200,570 1360,480 1440,500" fill="none" stroke="#C5C6E8" stroke-width="1"/>
+    <path d="M0,700 C280,640 560,760 840,680 C1120,620 1320,740 1440,700" fill="none" stroke="#D0D1F0" stroke-width="1.5"/>
+  </svg>
+
+  <header class="header">
+    <a href="index.html" class="header__logo">
+      <img src="flyer.png" alt="" class="header__logo-img">
+      <span class="header__title">Self-Compassion for Social Anxiety</span>
+    </a>
+    <button id="downloadPdfBtn" class="btn btn--outline">Download My Responses as PDF</button>
+  </header>
+
+  <!-- Tabs -->
+  <nav class="tabs">
+    <button class="tab tab--active" data-tab="stage1">Stage 1 &mdash; Introduction to Self-Compassion</button>
+    <button class="tab" data-tab="stage2">Stage 2 &mdash; Fear of Self-Compassion</button>
+  </nav>
+
+  <!-- Progress bar -->
+  <div class="progress-bar">
+    <div class="progress-bar__fill" id="progressFill"></div>
+  </div>
+
+  <!-- ======================= STAGE 1 ======================= -->
+  <div class="stage" id="stage1">
+
+    <!-- Step 1: Welcome -->
+    <section class="step" data-step="1">
+      <h2>Welcome</h2>
+      <div class="text-block">
+        <p>Welcome! For the first day of the writing intervention, we are going to start with learning about shame, and then walk you through writing exercises to help you respond to shame in a self-compassionate way. We ask that you find an uninterrupted 15-20 minute timeframe to complete the exercise today, when you can be somewhere quiet and private without distractions. This will be really important to get the most out of this experience.</p>
+        <p>We will begin by learning about shame and how it tends to show up when people experience social anxiety.</p>
+      </div>
+    </section>
+
+    <!-- Step 2: Psychoeducation -->
+    <section class="step" data-step="2">
+      <h2>Understanding Shame &amp; Self-Compassion</h2>
+      <div class="text-block">
+        <p>Shame is an uncomfortable emotion that we experience when we feel like we have not only done something bad, but that <strong>we ARE bad</strong>. It is the feeling that something is fundamentally wrong with us that will render us unacceptable or unlovable by others. This feeling can be particularly intense when it relates to parts of our identity that are marginalized or stigmatized by society, such as gender, race, sexual orientation, religion, or cultural background. Inherently, shame is a natural social emotion that arises from a desire to belong and to be loved. Shame is different than guilt. Guilt is an awareness that we've done something bad or wrong. However, shame makes us feel that we are bad, that we are flawed and that there is something inherently wrong with us. It is not easy to talk about shame. Even mentioning the word "shame" can lead to an experience of the emotion and evoke a sense of fear or vulnerability. So it can be a difficult emotion to work with.</p>
+        <p>People with high social anxiety are more likely to experience shame. Shame related to feeling like you are being judged by others, or feeling like you don't belong in social situations may make you feel more anxious and avoid future social situations that may elicit these emotions. Helping you cope with shame may relieve social anxiety. These exercises will help you address feelings of shame through cultivating self-compassion.</p>
+        <p>Self-compassion includes treating ourselves with support and kindness, recognizing that our responses are natural and human, and being mindful when struggling with aspects of ourselves and our experiences. Self-compassion includes openness to and acceptance of one's pain, the desire to ease one's pain with support, and an understanding that making mistakes and having vulnerabilities is part of the human experience. Studies have shown that self-compassion is a particularly helpful strategy for coping with shame. This writing exercise aims to help you develop self-compassion to help you deal with shame related to social situations.</p>
+      </div>
+    </section>
+
+    <!-- Step 3: Writing Instructions + Event Description -->
+    <section class="step" data-step="3">
+      <h2>Writing Instructions</h2>
+      <div class="text-block">
+        <p>Think of an event that made you feel shame during or following a social situation. For example:</p>
+        <ul>
+          <li>You may have been criticized or ridiculed when you were alone or when you were in the presence of others</li>
+          <li>You may have felt like you overreacted to something</li>
+          <li>You may have made a mistake or feel as though you failed at something in front of others</li>
+          <li>You may have said something you now think is stupid</li>
+          <li>You may have felt left out, rejected or excluded due to a marginalized identity</li>
+          <li>You may have realized your zipper was open at an important social event or experienced another wardrobe malfunction</li>
+          <li>You may have had an embarrassing accident or incident (e.g., spilling food, tripping)</li>
+          <li>You may have done something that does not fit norms of a culture or community</li>
+        </ul>
+        <p>Choose an event that is distressing enough that it evokes some feeling. Try to think of a situation that you would rate a 4 on a distress scale from 1 (little to no distress) to 10 (most severe distress you can imagine). Perhaps this is an event that you would not like anyone to hear about or remember because you worry it might make someone think less of you.</p>
+      </div>
+      <label class="field-label" for="s1_eventDescription">Now, describe the event in detail, including where it took place, the people involved, and the sequence of events. Focus on capturing the emotions and specific details to create a vivid picture of the event.</label>
+      <textarea id="s1_eventDescription" class="textarea" rows="8" data-field="stage1.eventDescription" placeholder="Describe the event here..."></textarea>
+    </section>
+
+    <!-- Step 4: Shame Rating Pre -->
+    <section class="step" data-step="4">
+      <h2>Shame Rating</h2>
+      <label class="field-label" for="s1_shameRatingPre">How much shame are you currently experiencing thinking about this event?</label>
+      <div class="slider-container">
+        <input type="range" id="s1_shameRatingPre" class="slider" min="0" max="100" value="50" data-field="stage1.shameRatingPre">
+        <div class="slider-labels">
+          <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span>
+        </div>
+        <div class="slider-value">Current value: <strong id="s1_shameRatingPreVal">50</strong></div>
+      </div>
+    </section>
+
+    <!-- Step 5: Mindfulness Guided Exercise -->
+    <section class="step" data-step="5">
+      <h2>Mindfulness Guided Exercise</h2>
+      <p class="field-label">Listen to the guided exercise audio, follow along with the text below, or both.</p>
+      <audio controls class="audio-player">
+        <source src="mindfulness.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="guided-exercise">
+        <p>Begin by finding a comfortable position. Try to allow your body to begin to relax, gently close your eyes if that feels available to you right now. Let's take a moment to connect with your breath, noticing the natural rhythm as it flows in and out. As you breathe, imagine drawing in calmness and exhaling tension. You may notice your body becoming more grounded with each breath.</p>
+        <p>Now bring to mind this event that made you feel shame. Gently hold space for this event in your mind. Imagine it in as much detail as you can, noticing what you saw, heard, and felt during this time.</p>
+        <p class="guided-exercise__pause">(pause to allow visualization)</p>
+        <p>Allow any feelings to arise naturally. Notice the emotions and acknowledge feelings of shame that come up. When we feel shame, it's natural to want to push it away. Try to notice this urge, and let the emotion be there. This emotion, and any other emotions that come up are a part of your experience and it's okay to feel them.</p>
+        <p>With a sense of curiosity, explore how shame feels in your body. Is there tightness in your chest, heaviness in your stomach, or a lump in your throat? Notice the physical sensations associated with these feelings. Be present with them.</p>
+        <p>Recognize that these feelings, while powerful, do not define you. They are only one part of your experience, not the entirety of who you are.</p>
+        <p class="guided-exercise__pause">(pause)</p>
+        <p>Now, take two more deep breaths. When you're ready, open your eyes.</p>
+      </div>
+    </section>
+
+    <!-- Step 6: Identity and Culture -->
+    <section class="step" data-step="6">
+      <h2>Identity and Culture</h2>
+      <div class="text-block">
+        <p>It is important to note that for many of us, shame we feel can be closely tied to our identities, especially those aspects that are marginalized or stigmatized (e.g., gender, race, ethnicity, sexual orientation, religion, or culture). However, it is important to recognize that shame is not inherent to any single identity. It is a response to societal attitudes, cultural norms, and interpersonal experiences. Healing from shame often involves challenging these external sources of shame.</p>
+        <p>The way shame is talked about, or not talked about, varies widely across cultures and communities. In some cultures, shame is seen as a collective experience, where the actions of one person reflect on the entire community or family. This can lead to pressure to conform and avoid bringing "shame" to the group. In other cultures, shame might be a more individual experience, with an emphasis on personal responsibility and moral failure. In some cultures, shame might be discussed openly as a way to encourage conforming to norms, whereas in other cultures shame may feel more like a silent burden, rarely acknowledged or spoken about, but deeply felt.</p>
+        <p>For example:</p>
+        <ul>
+          <li>An immigrant or a person from a non-English speaking background might feel shame related to their accent or language skills during a meeting or presentation</li>
+          <li>A member of a same-sex couple might feel shame about showing affection in a social environment where their identities are stigmatized</li>
+          <li>A person might feel ashamed of engaging in cultural or religious practices, such as praying, wearing religious attire, or celebrating specific cultural holidays, in social environments where their culture is minoritized or stigmatized</li>
+        </ul>
+        <p>Reflecting on how our experiences of shame have been shaped by our identities, communities, families and cultural backgrounds can be a powerful step towards responding to our experiences of shame with self-compassion. In your own life, how has shame intersected with your identities? How have these experiences been shaped by your family, your communities, your cultural background, and society at large?</p>
+      </div>
+      <label class="field-label" for="s1_identityCulture">Reflect on how your experience of shame, or the way you responded to shame in the memory you wrote about, may be connected to your identities. Consider how this experience has been shaped by your cultural background, community, or family influences.</label>
+      <textarea id="s1_identityCulture" class="textarea" rows="8" data-field="stage1.identityCulture" placeholder="Write your reflection here..."></textarea>
+    </section>
+
+    <!-- Step 7: Common Humanity -->
+    <section class="step" data-step="7">
+      <h2>Common Humanity</h2>
+      <div class="text-block">
+        <p>Shame feels isolating, but feelings of shame and perceived inadequacy are universal among humans. Early in our species' evolution, we figured out that there were better survival odds when we worked as a group and when we belonged to a group. Shame helped hold the group together and helped us survive. So remember that shame is a natural emotion arising from your universal human need to belong, to be connected, accepted, and loved. No human being is exempt from pain and suffering in their life. It's a shared experience that binds us together. Painful beliefs about ourselves, like 'I am a bad person', come up with the feeling of shame because these thoughts helped humans survive.</p>
+      </div>
+      <div class="text-block">
+        <p><strong>Next, write 2-3 statements</strong> like the examples below, reminding yourself that <strong>you are not alone and isolated in your feelings of shame</strong>, as feeling shame is a common and universal part of the human experience.</p>
+        <p>Examples:</p>
+        <ul>
+          <li>Many people feel like I do in similar situations.</li>
+          <li>Other people would likely have similar reactions to this event as I did.</li>
+          <li>I am not alone in having these feelings. There is nothing wrong or abnormal about my feeling this way, even if it feels like it is wrong or abnormal.</li>
+          <li>This shows I'm human. We all screw up and make mistakes/get rejected/fail at things/experience disappointment.</li>
+          <li>When I notice feeling lonely or isolated, I want to try to remind myself that I am not alone in this.</li>
+        </ul>
+      </div>
+      <label class="field-label" for="s1_commonHumanityStatement1">Statement 1</label>
+      <input type="text" id="s1_commonHumanityStatement1" class="text-input" data-field="stage1.commonHumanityStatement1" placeholder="Write your first statement...">
+      <label class="field-label" for="s1_commonHumanityStatement2">Statement 2</label>
+      <input type="text" id="s1_commonHumanityStatement2" class="text-input" data-field="stage1.commonHumanityStatement2" placeholder="Write your second statement...">
+      <label class="field-label" for="s1_commonHumanityStatement3">Statement 3</label>
+      <input type="text" id="s1_commonHumanityStatement3" class="text-input" data-field="stage1.commonHumanityStatement3" placeholder="Write your third statement...">
+    </section>
+
+    <!-- Step 8: Kindness -->
+    <section class="step" data-step="8">
+      <h2>Self-Kindness</h2>
+      <div class="text-block">
+        <p>Now write a paragraph to yourself, expressing <strong>words of understanding, support, kindness, and concern</strong> for the suffering you've experienced during this event. In that moment of shame, <strong>what did you need?</strong> If you or someone else could have said something comforting or helpful to you in that moment, <strong>what would you have wanted whispered in your ear?</strong></p>
+        <p>It can be helpful to think of a close person who is important to you, maybe a good friend or a family member. Imagine that this person tells you about going through this very same difficult situation that you described. How would you want to help them in this situation? What would you offer in the way of care and comfort?</p>
+        <p>Now try offering these words to yourself. Try writing to yourself with understanding, encouragement, support, and kindness as if you were speaking to this friend who was struggling in the same way, who has shared going through this event, and feeling shame. What would you tell your friend to support them?</p>
+      </div>
+      <textarea id="s1_kindness" class="textarea" rows="8" data-field="stage1.kindness" placeholder="Write your kind words here..."></textarea>
+    </section>
+
+    <!-- Step 9: Shame Rating Post -->
+    <section class="step" data-step="9">
+      <h2>Shame Rating</h2>
+      <label class="field-label" for="s1_shameRatingPost">How much shame are you currently experiencing thinking about this event you selected?</label>
+      <div class="slider-container">
+        <input type="range" id="s1_shameRatingPost" class="slider" min="0" max="100" value="50" data-field="stage1.shameRatingPost">
+        <div class="slider-labels">
+          <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span>
+        </div>
+        <div class="slider-value">Current value: <strong id="s1_shameRatingPostVal">50</strong></div>
+      </div>
+    </section>
+
+    <!-- Step 10: Ongoing Practice -->
+    <section class="step" data-step="10">
+      <h2>Ongoing Practice</h2>
+      <div class="text-block">
+        <p>Congratulations on making it through the first day!</p>
+        <p>I appreciate your courage to do this hard work, it is truly an accomplishment. Today, we gave you an introduction to shame, talked about how and why shame comes up in social situations, and introduced how self-compassion can help the experience of shame. You practiced the difficult task of holding space for shame instead of pushing it away and reflected on how your culture and identities may influence your experience of shame. Then, you wrote about how shame is a part of our shared human experience and practiced giving support and kindness to yourself as a response to a memory of when you felt shame.</p>
+        <p>Over the next few days, I encourage you to continue this work by practicing noticing moments of shame, how it feels in your body, and allowing yourself the room and space to feel it. Then practice reminding yourself that shame is a common human experience and offering yourself support and kindness, as you would offer it to a friend or loved one who was struggling.</p>
+      </div>
+    </section>
+
+    <!-- Step 11: End -->
+    <section class="step" data-step="11">
+      <h2>Stage 1 Complete</h2>
+      <div class="text-block completion-block">
+        <p>Your responses have been saved. I encourage you to come back and complete Stage 1 one more time, then move on to Stage 2.</p>
+      </div>
+      <button class="btn btn--primary" id="s1_goToStage2">Continue to Stage 2</button>
+    </section>
+  </div>
+
+  <!-- ======================= STAGE 2 ======================= -->
+  <div class="stage" id="stage2" style="display:none;">
+
+    <!-- Step 1: Welcome Back -->
+    <section class="step" data-step="1">
+      <h2>Welcome Back</h2>
+      <div class="text-block">
+        <p>Welcome back! Today, we will start by talking about skepticism, fears, or resistance to self-compassion that may have naturally come up for you as you practiced this week. You are not alone. It is very common, especially at the beginning, to have fears about self-compassion and to feel ambivalent about putting the work and effort into this practice. It may feel scary, corny, or like a waste of time. If you are feeling any of that, that is understandable. It is also possible that thoughts and beliefs such as 'I'm unlovable', or 'I don't deserve this' may have come up for you. These thoughts are also natural when we try to give ourselves compassion. Try to acknowledge these fears, feelings, and thoughts without pushing them away or criticizing your experience.</p>
+      </div>
+    </section>
+
+    <!-- Step 2: Fears of Self-Compassion -->
+    <section class="step" data-step="2">
+      <h2>Fears of Self-Compassion</h2>
+      <div class="text-block">
+        <p>This week you may also have had feelings and thoughts related to some common fears or concerns people express about practicing self-compassion. Read the following common fears or misconceptions and <strong>select three</strong> that resonate with your beliefs or experiences. Read about the misconceptions below.</p>
+      </div>
+
+      <div class="fears-list" id="fearsList">
+        <!-- Fear 1 -->
+        <div class="fear-item">
+          <label class="fear-checkbox">
+            <input type="checkbox" data-fear="0" class="fear-input">
+            <span class="fear-label"><strong>1. Fear of self-indulgence or letting oneself off the hook.</strong> There's a concern that being too self-compassionate means making excuses or not taking responsibility or being lazy.</span>
+          </label>
+          <div class="fear-explanation" style="display:none;">
+            <p>Although many people fear that being self-compassionate means being self-indulgent, it is actually just the opposite. Compassion inclines us toward long-term health and well-being, not short-term pleasure (just as a compassionate mother might not let her child eat all the ice cream the child wants). Research shows self-compassionate people engage in healthier behaviors like exercise, eating in balanced ways, drinking less, and going to the doctor more regularly.</p>
+          </div>
+        </div>
+
+        <!-- Fear 2 -->
+        <div class="fear-item">
+          <label class="fear-checkbox">
+            <input type="checkbox" data-fear="1" class="fear-input">
+            <span class="fear-label"><strong>2. Fear that self-compassion is a form of self-pity.</strong></span>
+          </label>
+          <div class="fear-explanation" style="display:none;">
+            <p>Many people fear that self-compassion is really just a form of self-pity. In fact, self-compassion is an antidote to self-pity. While self-pity says, "poor me," self-compassion recognizes that life is challenging at different points for everyone. Research shows that self-compassionate people are more likely to engage in perspective-taking, rather than solely focusing on their own distress. They are also less likely to ruminate on how bad things are, which is one of the reasons self-compassionate people have stronger mental health. When we are self-compassionate, we remember that everyone suffers from time to time (common humanity), and we don't judge or over-fixate on our struggles (mindfulness). Self-compassion is not a "woe is me" attitude.</p>
+          </div>
+        </div>
+
+        <!-- Fear 3 -->
+        <div class="fear-item">
+          <label class="fear-checkbox">
+            <input type="checkbox" data-fear="2" class="fear-input">
+            <span class="fear-label"><strong>3. Fear of becoming complacent or lacking motivation</strong> if self-criticism is eliminated. Many believe harsh self-criticism is required to perform at a high level and to succeed. Self-criticism can become such an ingrained habit that it feels right or like the only way. Some people worry that self-compassion will make them complacent and less driven to improve.</span>
+          </label>
+          <div class="fear-explanation" style="display:none;">
+            <p>The most common misgiving people have is that self-compassion might undermine their motivation to achieve. Most people believe self-criticism is an effective motivator, but it's not. Self-criticism tends to undermine self-confidence and leads to fear of failure. If we are self-compassionate, we will still be motivated to reach our goals&mdash;not because we're inadequate as we are, but because we care about ourselves and want to reach our full potential. Research shows that self-compassionate people have high personal standards; they just don't beat themselves up when they fail. This means they are less afraid of failure and are more likely to try again and to persist in their efforts even if they feel like they have failed.</p>
+          </div>
+        </div>
+
+        <!-- Fear 4 -->
+        <div class="fear-item">
+          <label class="fear-checkbox">
+            <input type="checkbox" data-fear="3" class="fear-input">
+            <span class="fear-label"><strong>4. Fear of appearing narcissistic or self-absorbed.</strong> In some cultures, there is the belief that caring for oneself is selfish and self-focused.</span>
+          </label>
+          <div class="fear-explanation" style="display:none;">
+            <p>Some worry that by being self-compassionate rather than just focusing on being compassionate to others, they will become self-centered or selfish. However, giving compassion to ourselves actually enables us to give more to others in relationships. Research shows self-compassionate people tend to be more caring and supportive in romantic relationships, are more likely to compromise in relationship conflicts, and are more compassionate and forgiving toward others.</p>
+          </div>
+        </div>
+
+        <!-- Fear 5 -->
+        <div class="fear-item">
+          <label class="fear-checkbox">
+            <input type="checkbox" data-fear="4" class="fear-input">
+            <span class="fear-label"><strong>5. Discomfort with feelings of warmth/kindness toward self</strong> and the belief that one doesn't deserve self-compassion. For some, self-compassionate feelings seem unfamiliar or even threatening, and some people may feel undeserving of kindness from themselves or others.</span>
+          </label>
+          <div class="fear-explanation" style="display:none;">
+            <p>The belief that one doesn't deserve self-compassion is a common but mistaken idea. Many people are taught to think they need to be perfect or meet certain standards to be worthy of kindness. This makes it hard for them to be gentle with themselves and can make self-compassion feel strange or even scary. However, research shows that self-compassion is crucial for mental health and emotional well-being. It helps people recognize their inherent value as human beings, without needing to earn it. Being kind to yourself reduces stress, builds resilience, and leads to a healthier outlook on life. Everyone deserves kindness and understanding from themselves, just as they would from others, simply because they are human.</p>
+          </div>
+        </div>
+
+        <!-- Fear 6 -->
+        <div class="fear-item">
+          <label class="fear-checkbox">
+            <input type="checkbox" data-fear="5" class="fear-input">
+            <span class="fear-label"><strong>6. Associations of self-compassion with weakness and vulnerability.</strong> There are cultural narratives that equate self-compassion with being weak or inferior. It may be related to fear of losing one's "edge" or psychological toughness.</span>
+          </label>
+          <div class="fear-explanation" style="display:none;">
+            <p>In fact, self-compassion is a reliable source of inner strength that confers courage and enhances resilience when we are faced with difficulties. Research shows self-compassionate people are better able to cope with tough situations like divorce, trauma, or chronic pain.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="fear-validation" id="fearValidation" style="display:none;">Please select exactly 3 fears to continue.</p>
+    </section>
+
+    <!-- Step 3: Challenge Misconceptions -->
+    <section class="step" data-step="3">
+      <h2>Challenge Misconceptions</h2>
+      <div id="selectedFearsDisplay"></div>
+      <div class="text-block">
+        <p>Now, notice and write down the common fears and misconceptions about self-compassion that resonate with you. These are fears or concerns that many people have. An ever-increasing body of research shows that the most common misgivings about self-compassion are misconceptions.</p>
+        <p><strong>Offer one way to challenge each of the three misconceptions you selected:</strong></p>
+      </div>
+      <textarea id="s2_challengeMisconceptions" class="textarea" rows="8" data-field="stage2.challengeMisconceptions" placeholder="Write your challenges to the misconceptions here..."></textarea>
+    </section>
+
+    <!-- Step 4: Writing Instructions + Event Description -->
+    <section class="step" data-step="4">
+      <h2>Writing Instructions</h2>
+      <div class="text-block">
+        <p>Now, think of an event that made you feel shame during or after a social situation. You can either reflect on the same situation you selected during the previous exercises or select a new one.</p>
+        <p>For example:</p>
+        <ul>
+          <li>You may have been criticized or ridiculed when you were alone or when you were in the presence of others</li>
+          <li>You may have felt like you overreacted to something</li>
+          <li>You may have made a mistake or feel as though you failed at something in front of others</li>
+          <li>You may have said something you now think is stupid</li>
+          <li>You may have felt left out, rejected or excluded due to a marginalized identity</li>
+          <li>You may have realized your zipper was open at an important social event or experienced another wardrobe malfunction</li>
+          <li>You may have had an embarrassing accident or incident (e.g., spilling food, tripping)</li>
+          <li>You may have done something that does not fit norms of a culture or community</li>
+        </ul>
+        <p>Choose an event that is distressing enough that it evokes some feeling. Try to think of a situation that you would rate a 4 on a distress scale from 1 (little to no distress) to 10 (most severe distress you can imagine). Perhaps this is an event that you would not like anyone to hear about or remember because you worry it might make someone think less of you.</p>
+      </div>
+      <label class="field-label" for="s2_eventDescription">Now, describe the event in detail, including where it took place, the people involved, and the sequence of events. Focus on capturing the emotions and specific details to create a vivid picture of the event.</label>
+      <textarea id="s2_eventDescription" class="textarea" rows="8" data-field="stage2.eventDescription" placeholder="Describe the event here..."></textarea>
+    </section>
+
+    <!-- Step 5: Shame Rating Pre -->
+    <section class="step" data-step="5">
+      <h2>Shame Rating</h2>
+      <label class="field-label" for="s2_shameRatingPre">How much shame are you currently experiencing thinking about this event?</label>
+      <div class="slider-container">
+        <input type="range" id="s2_shameRatingPre" class="slider" min="0" max="100" value="50" data-field="stage2.shameRatingPre">
+        <div class="slider-labels">
+          <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span>
+        </div>
+        <div class="slider-value">Current value: <strong id="s2_shameRatingPreVal">50</strong></div>
+      </div>
+    </section>
+
+    <!-- Step 6: Mindfulness Guided Exercise -->
+    <section class="step" data-step="6">
+      <h2>Mindfulness Guided Exercise</h2>
+      <p class="field-label">Listen to the guided exercise audio, follow along with the text below, or both.</p>
+      <audio controls class="audio-player">
+        <source src="mindfulness.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      <div class="guided-exercise">
+        <p>Begin by finding a comfortable position. Try to allow your body to begin to relax, gently close your eyes if that feels available to you right now. Let's take a moment to connect with your breath, noticing the natural rhythm as it flows in and out. As you breathe, imagine drawing in calmness and exhaling tension. You may notice your body becoming more grounded with each breath.</p>
+        <p>Now bring to mind this event that made you feel shame. Gently hold space for this event in your mind. Imagine it in as much detail as you can, noticing what you saw, heard, and felt during this time.</p>
+        <p class="guided-exercise__pause">(pause to allow visualization)</p>
+        <p>Allow any feelings to arise naturally. Notice the emotions and acknowledge feelings of shame that come up. When we feel shame, it's natural to want to push it away. Try to notice this urge, and let the emotion be there. This emotion, and any other emotions that come up are a part of your experience and it's okay to feel them.</p>
+        <p>With a sense of curiosity, explore how shame feels in your body. Is there tightness in your chest, heaviness in your stomach, or a lump in your throat? Notice the physical sensations associated with these feelings. Be present with them.</p>
+        <p>Recognize that these feelings, while powerful, do not define you. They are only one part of your experience, not the entirety of who you are.</p>
+        <p class="guided-exercise__pause">(pause)</p>
+        <p>Now, take two more deep breaths. When you're ready, open your eyes.</p>
+      </div>
+    </section>
+
+    <!-- Step 7: Identity and Culture -->
+    <section class="step" data-step="7">
+      <h2>Identity and Culture</h2>
+      <div class="text-block">
+        <p>It is important to note that for many of us, shame we feel can be closely tied to our identities, especially those aspects that are marginalized or stigmatized (e.g., gender, race, ethnicity, sexual orientation, religion, or culture). However, it is important to recognize that shame is not inherent to any single identity. It is a response to societal attitudes, cultural norms, and interpersonal experiences. Healing from shame often involves challenging these external sources of shame.</p>
+        <p>The way shame is talked about, or not talked about, varies widely across cultures and communities. In some cultures, shame is seen as a collective experience, where the actions of one person reflect on the entire community or family. This can lead to pressure to conform and avoid bringing "shame" to the group. In other cultures, shame might be a more individual experience, with an emphasis on personal responsibility and moral failure. In some cultures, shame might be discussed openly as a way to encourage conforming to norms, whereas in other cultures shame may feel more like a silent burden, rarely acknowledged or spoken about, but deeply felt.</p>
+        <p>For example:</p>
+        <ul>
+          <li>An immigrant or a person from a non-English speaking background might feel shame related to their accent or language skills during a meeting or presentation</li>
+          <li>A member of a same-sex couple might feel shame about showing affection in a social environment where their identities are stigmatized</li>
+          <li>A person might feel ashamed of engaging in cultural or religious practices, such as praying, wearing religious attire, or celebrating specific cultural holidays, in social environments where their culture is minoritized or stigmatized</li>
+        </ul>
+        <p>Reflecting on how our experiences of shame have been shaped by our identities, communities, families and cultural backgrounds can be a powerful step towards responding to our experiences of shame with self-compassion. In your own life, how has shame intersected with your identities? How have these experiences been shaped by your family, your communities, your cultural background, and society at large?</p>
+      </div>
+      <label class="field-label" for="s2_identityCulture">Reflect on how your experience of shame, or the way you responded to shame in the memory you wrote about, may be connected to your identities. Consider how this experience has been shaped by your cultural background, community, or family influences.</label>
+      <textarea id="s2_identityCulture" class="textarea" rows="8" data-field="stage2.identityCulture" placeholder="Write your reflection here..."></textarea>
+    </section>
+
+    <!-- Step 8: Common Humanity -->
+    <section class="step" data-step="8">
+      <h2>Common Humanity</h2>
+      <div class="text-block">
+        <p>Shame feels isolating, but feelings of shame and perceived inadequacy are universal among humans. Early in our species' evolution, we figured out that there were better survival odds when we worked as a group and when we belonged to a group. Shame helped hold the group together and helped us survive. So remember that shame is a natural emotion arising from your universal human need to belong, to be connected, accepted, and loved. No human being is exempt from pain and suffering in their life. It's a shared experience that binds us together. Painful beliefs about ourselves, like 'I am a bad person', come up with the feeling of shame because these thoughts helped humans survive.</p>
+      </div>
+      <div class="text-block">
+        <p><strong>Next, write 2-3 statements</strong> like the examples below, reminding yourself that <strong>you are not alone and isolated in your feelings of shame</strong>, as feeling shame is a common and universal part of the human experience.</p>
+        <p>Examples:</p>
+        <ul>
+          <li>Many people feel like I do in similar situations.</li>
+          <li>Other people would likely have similar reactions to this event as I did.</li>
+          <li>I am not alone in having these feelings. There is nothing wrong or abnormal about my feeling this way, even if it feels like it is wrong or abnormal.</li>
+          <li>This shows I'm human. We all screw up and make mistakes/get rejected/fail at things/experience disappointment.</li>
+          <li>When I notice feeling lonely or isolated, I want to try to remind myself that I am not alone in this.</li>
+        </ul>
+      </div>
+      <label class="field-label" for="s2_commonHumanityStatement1">Statement 1</label>
+      <input type="text" id="s2_commonHumanityStatement1" class="text-input" data-field="stage2.commonHumanityStatement1" placeholder="Write your first statement...">
+      <label class="field-label" for="s2_commonHumanityStatement2">Statement 2</label>
+      <input type="text" id="s2_commonHumanityStatement2" class="text-input" data-field="stage2.commonHumanityStatement2" placeholder="Write your second statement...">
+      <label class="field-label" for="s2_commonHumanityStatement3">Statement 3</label>
+      <input type="text" id="s2_commonHumanityStatement3" class="text-input" data-field="stage2.commonHumanityStatement3" placeholder="Write your third statement...">
+    </section>
+
+    <!-- Step 9: Kindness -->
+    <section class="step" data-step="9">
+      <h2>Self-Kindness</h2>
+      <div class="text-block">
+        <p>Now write a paragraph to yourself, expressing <strong>words of understanding, support, kindness, and concern</strong> for the suffering you've experienced during this event. In that moment of shame, <strong>what did you need?</strong> If you or someone else could have said something comforting or helpful to you in that moment, <strong>what would you have wanted whispered in your ear?</strong></p>
+        <p>It can be helpful to think of a close person who is important to you, maybe a good friend or a family member. Imagine that this person tells you about going through this very same difficult situation that you described. How would you want to help them in this situation? What would you offer in the way of care and comfort?</p>
+        <p>Now try offering these words to yourself. Try writing to yourself with understanding, encouragement, support, and kindness as if you were speaking to this friend who was struggling in the same way, who has shared going through this event, and feeling shame. What would you tell your friend to support them?</p>
+      </div>
+      <textarea id="s2_kindness" class="textarea" rows="8" data-field="stage2.kindness" placeholder="Write your kind words here..."></textarea>
+    </section>
+
+    <!-- Step 10: Self-Compassion Phrase -->
+    <section class="step" data-step="10">
+      <h2>Self-Compassion Phrase for Shame</h2>
+      <div class="text-block">
+        <p>Language is one powerful way we can apply self-compassion. See if you can identify one phrase that can become a simple, habitual, compassionate response to a moment of shame. See what you notice as you say this compassionate phrase to yourself during moments of shame. Notice how it makes you feel. Notice how shame may signal a pathway to self-compassion based on how we ultimately respond to ourselves when we are struggling.</p>
+        <p>See if you can transform the words you have used to offer kindness to yourself into a short phrase &mdash; a message to offer yourself.</p>
+        <p>Examples:</p>
+        <ul>
+          <li>I'm here for you</li>
+          <li>You are only human</li>
+          <li>I am human and it is understandable to feel inadequate or flawed sometimes</li>
+          <li>This too shall pass</li>
+          <li>It is okay to make mistakes</li>
+          <li>It's okay, I know it's painful to feel this way</li>
+          <li>I deserve to treat myself with kindness</li>
+          <li>I got this</li>
+          <li>May I love and accept myself, just as I am</li>
+          <li>I am worthy of love and understanding, even when things are tough</li>
+          <li>May I be kind and gentle to myself in this difficult moment</li>
+          <li>It's okay to struggle, I'm doing my best in this moment</li>
+          <li>I am not alone in this, others have felt this way too</li>
+          <li>May I treat myself with the same kindness I would offer a friend</li>
+          <li>I deserve patience and compassion from myself</li>
+        </ul>
+      </div>
+      <label class="field-label" for="s2_selfCompassionPhrase">Write the phrase below:</label>
+      <input type="text" id="s2_selfCompassionPhrase" class="text-input" data-field="stage2.selfCompassionPhrase" placeholder="Your self-compassion phrase...">
+      <div class="text-block" style="margin-top: 1.5rem;">
+        <p>Now, try offering yourself this message, let the words in, to whatever extent possible. You may choose to close your eyes and repeat this message to yourself, or perhaps you try saying it out loud.</p>
+      </div>
+    </section>
+
+    <!-- Step 11: Shame Rating Post -->
+    <section class="step" data-step="11">
+      <h2>Shame Rating</h2>
+      <label class="field-label" for="s2_shameRatingPost">How much shame are you currently experiencing thinking about this event you selected?</label>
+      <div class="slider-container">
+        <input type="range" id="s2_shameRatingPost" class="slider" min="0" max="100" value="50" data-field="stage2.shameRatingPost">
+        <div class="slider-labels">
+          <span>0</span><span>10</span><span>20</span><span>30</span><span>40</span><span>50</span><span>60</span><span>70</span><span>80</span><span>90</span><span>100</span>
+        </div>
+        <div class="slider-value">Current value: <strong id="s2_shameRatingPostVal">50</strong></div>
+      </div>
+    </section>
+
+    <!-- Step 12: Ongoing Practice -->
+    <section class="step" data-step="12">
+      <h2>Ongoing Practice</h2>
+      <div class="text-block">
+        <p>You have completed another day!</p>
+        <p>I appreciate your courage to continue doing this hard work, it is truly an accomplishment. Today, you pushed yourself to understand fears and resistance that may have come up for you. You practiced holding space for shame, acknowledging that feeling shame is a part of our human experience, and giving support to yourself as a response to an event when you felt shame. You created a powerful phrase that can help harness self-compassion during moments of shame. Over the next few days, I would invite you to practice offering this message to yourself whenever you notice feeling shame.</p>
+      </div>
+    </section>
+
+    <!-- Step 13: End -->
+    <section class="step" data-step="13">
+      <h2>All Stages Complete</h2>
+      <div class="text-block completion-block">
+        <p>Your responses have been saved. I encourage you to come back another time to do Stage 2 again.</p>
+        <p>You can download a PDF of all your responses using the button below, or revisit any section at any time.</p>
+      </div>
+      <button class="btn btn--primary" id="downloadPdfBtn2">Download My Responses as PDF</button>
+    </section>
+  </div>
+
+  <!-- Step navigation -->
+  <div class="step-nav">
+    <button class="btn btn--secondary" id="prevBtn">Back</button>
+    <button class="btn btn--primary" id="nextBtn">Next</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/pdf-export.js"></script>
+</body>
+</html>

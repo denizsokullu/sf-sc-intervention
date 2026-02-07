@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Self-Compassion for Social Anxiety</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="landing-page">
+  <!-- Interactive decorative SVG lines -->
+  <svg class="deco-line deco-line--fullscreen" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+    <path class="wave" data-speed="1.0" data-base="M0,80 C360,140 720,20 1080,80 C1260,110 1380,50 1440,80" d="M0,80 C360,140 720,20 1080,80 C1260,110 1380,50 1440,80" fill="none" stroke="#C5C6E8" stroke-width="2" opacity="0.5"/>
+    <path class="wave" data-speed="0.7" data-base="M0,160 C320,100 640,200 960,130 C1200,80 1360,180 1440,140" d="M0,160 C320,100 640,200 960,130 C1200,80 1360,180 1440,140" fill="none" stroke="#D0D1F0" stroke-width="1.5" opacity="0.4"/>
+    <path class="wave" data-speed="0.5" data-base="M0,450 C400,500 800,400 1100,460 C1300,490 1400,430 1440,450" d="M0,450 C400,500 800,400 1100,460 C1300,490 1400,430 1440,450" fill="none" stroke="#C5C6E8" stroke-width="1.5" opacity="0.35"/>
+    <path class="wave" data-speed="0.8" data-base="M0,700 C280,640 560,760 840,700 C1120,650 1320,740 1440,700" d="M0,700 C280,640 560,760 840,700 C1120,650 1320,740 1440,700" fill="none" stroke="#D0D1F0" stroke-width="2" opacity="0.4"/>
+    <path class="wave" data-speed="0.6" data-base="M0,820 C360,860 720,780 1080,830 C1260,850 1380,800 1440,820" d="M0,820 C360,860 720,780 1080,830 C1260,850 1380,800 1440,820" fill="none" stroke="#C5C6E8" stroke-width="1.5" opacity="0.3"/>
+  </svg>
+
+  <main class="landing">
+    <div class="landing__card">
+      <img src="flyer.png" alt="Self-hug heart illustration" class="landing__image">
+      <h1 class="landing__title">Self-Compassion for Social Anxiety</h1>
+      <p class="landing__subtitle">A shame-focused self-compassion writing intervention</p>
+      <p class="landing__description">Welcome! This is a free, evidence-based writing intervention designed to help individuals with social anxiety respond to feelings of shame with self-compassion.</p>
+
+      <details class="landing__details">
+        <summary class="landing__details-toggle">Learn more about this intervention</summary>
+        <div class="landing__details-content">
+          <div class="landing__detail-item">
+            <strong>Who is this for?</strong>
+            <p>This intervention was developed for individuals experiencing elevated social anxiety and shame. It is grounded in research showing that shame is a core feature and maintaining factor of social anxiety, closely linked to self-focused attention, post-event processing, and self-criticism.</p>
+          </div>
+          <div class="landing__detail-item">
+            <strong>What does it involve?</strong>
+            <p>The intervention consists of structured writing exercises rooted in three components of self-compassion: mindfulness, common humanity, and self-kindness. It also addresses fears of self-compassion and culturally mediated shame through guided reflection.</p>
+          </div>
+          <div class="landing__detail-item">
+            <strong>How is it designed to be completed?</strong>
+            <p>The intervention has two stages designed to be completed over two weeks. Stage 1 introduces self-compassion and guides you through a writing exercise. You are encouraged to complete Stage 1 twice. Stage 2 builds on this with additional exercises addressing fears of self-compassion and creating a personal self-compassion phrase. You are encouraged to complete Stage 2 three times. Each session takes approximately 15&ndash;20 minutes.</p>
+          </div>
+          <div class="landing__detail-item">
+            <strong>What has the research shown?</strong>
+            <p>In a randomized controlled study, participants who completed this intervention demonstrated significant reductions in shame and increases in self-compassion, with gains maintained at one-month follow-up. The intervention also reduced self-focused attention, post-event processing, social anxiety symptoms, and behavioral avoidance.</p>
+          </div>
+        </div>
+      </details>
+
+      <p class="landing__privacy">All your responses stay on your device. Nothing is sent to any server.</p>
+      <p class="landing__author">Created by Selen Amado Sokullu, MA</p>
+      <button id="beginBtn" class="btn btn--primary">Start</button>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+      // --- Begin / Continue button ---
+      var data = localStorage.getItem('sfsc_data');
+      var btn = document.getElementById('beginBtn');
+      if (data) {
+        btn.textContent = 'Continue Where I Left Off';
+      }
+      btn.addEventListener('click', function() {
+        if (!data) {
+          var session = {
+            sessionId: 'anon_' + Math.random().toString(36).substr(2, 9),
+            createdAt: new Date().toISOString(),
+            stage1: { currentStep: 1 },
+            stage2: { currentStep: 1 }
+          };
+          localStorage.setItem('sfsc_data', JSON.stringify(session));
+        }
+        window.location.href = 'intervention.html';
+      });
+
+      // --- Interactive SVG wave lines ---
+      var waves = document.querySelectorAll('.wave');
+      var mouseX = 0.5;
+      var mouseY = 0.5;
+      var targetX = 0.5;
+      var targetY = 0.5;
+
+      document.addEventListener('mousemove', function(e) {
+        targetX = e.clientX / window.innerWidth;
+        targetY = e.clientY / window.innerHeight;
+      });
+
+      // Parse a path's base control points to shift them
+      function shiftPath(basePath, dx, dy) {
+        return basePath.replace(/([\d.]+),([\d.]+)/g, function(match, x, y) {
+          var nx = (parseFloat(x) + dx).toFixed(1);
+          var ny = (parseFloat(y) + dy).toFixed(1);
+          return nx + ',' + ny;
+        });
+      }
+
+      function animate() {
+        // Smooth lerp toward mouse
+        mouseX += (targetX - mouseX) * 0.04;
+        mouseY += (targetY - mouseY) * 0.04;
+
+        var offsetX = (mouseX - 0.5) * 2; // -1 to 1
+        var offsetY = (mouseY - 0.5) * 2;
+
+        waves.forEach(function(wave) {
+          var speed = parseFloat(wave.getAttribute('data-speed')) || 1;
+          var basePath = wave.getAttribute('data-base');
+          var dx = offsetX * 30 * speed;
+          var dy = offsetY * 20 * speed;
+          wave.setAttribute('d', shiftPath(basePath, dx, dy));
+        });
+
+        requestAnimationFrame(animate);
+      }
+
+      requestAnimationFrame(animate);
+    })();
+  </script>
+</body>
+</html>
