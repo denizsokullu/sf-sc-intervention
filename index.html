@@ -3,7 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Self-Compassion for Social Anxiety</title>
+  <title>Self-Compassion for Social Anxiety | Free Evidence-Based Writing Intervention</title>
+  <meta name="description" content="A free, evidence-based self-compassion writing intervention for social anxiety and shame. Guided exercises in mindfulness, common humanity, and self-kindness. Backed by research showing significant reductions in shame, social anxiety, and avoidance.">
+  <meta name="keywords" content="self-compassion, social anxiety, shame, writing intervention, self-help, mindfulness, common humanity, self-kindness, CBT, evidence-based, free intervention, mental health">
+  <meta name="author" content="Selen Amado Sokullu, MA">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="http://selfcompassionforshame.selenamado.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Self-Compassion for Social Anxiety | Free Writing Intervention">
+  <meta property="og:description" content="A free, evidence-based writing intervention to help individuals with social anxiety respond to shame with self-compassion. Backed by a randomized controlled trial.">
+  <meta property="og:image" content="http://selfcompassionforshame.selenamado.com/flyer.png">
+  <meta property="og:url" content="http://selfcompassionforshame.selenamado.com/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Self-Compassion for Social Anxiety | Free Writing Intervention">
+  <meta name="twitter:description" content="A free, evidence-based writing intervention to help individuals with social anxiety respond to shame with self-compassion.">
+  <meta name="twitter:image" content="http://selfcompassionforshame.selenamado.com/flyer.png">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Self-Compassion for Social Anxiety",
+    "description": "A free, evidence-based self-compassion writing intervention designed to help individuals with social anxiety respond to feelings of shame with self-compassion.",
+    "url": "http://selfcompassionforshame.selenamado.com/",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Selen Amado Sokullu"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
@@ -50,29 +91,54 @@
 
       <p class="landing__privacy">All your responses stay on your device. Nothing is sent to any server.</p>
       <p class="landing__author">Created by Selen Amado Sokullu, MA</p>
-      <button id="beginBtn" class="btn btn--primary">Start</button>
+      <div class="landing__actions">
+        <button id="beginBtn" class="btn btn--primary">Start</button>
+        <button id="continueBtn" class="btn btn--primary" style="display:none;">Continue Where I Left Off</button>
+        <button id="startOverBtn" class="btn btn--outline" style="display:none;">Start Over</button>
+      </div>
     </div>
   </main>
 
   <script>
     (function() {
-      // --- Begin / Continue button ---
+      // --- Begin / Continue / Start Over buttons ---
       var data = localStorage.getItem('sfsc_data');
-      var btn = document.getElementById('beginBtn');
-      if (data) {
-        btn.textContent = 'Continue Where I Left Off';
+      var beginBtn = document.getElementById('beginBtn');
+      var continueBtn = document.getElementById('continueBtn');
+      var startOverBtn = document.getElementById('startOverBtn');
+
+      function createNewSession() {
+        var session = {
+          sessionId: 'anon_' + Math.random().toString(36).substr(2, 9),
+          createdAt: new Date().toISOString(),
+          stage1: { currentStep: 1 },
+          stage2: { currentStep: 1 }
+        };
+        localStorage.setItem('sfsc_data', JSON.stringify(session));
       }
-      btn.addEventListener('click', function() {
-        if (!data) {
-          var session = {
-            sessionId: 'anon_' + Math.random().toString(36).substr(2, 9),
-            createdAt: new Date().toISOString(),
-            stage1: { currentStep: 1 },
-            stage2: { currentStep: 1 }
-          };
-          localStorage.setItem('sfsc_data', JSON.stringify(session));
-        }
+
+      if (data) {
+        // Returning user: show Continue + Start Over, hide Start
+        beginBtn.style.display = 'none';
+        continueBtn.style.display = '';
+        startOverBtn.style.display = '';
+      }
+
+      beginBtn.addEventListener('click', function() {
+        createNewSession();
         window.location.href = 'intervention.html';
+      });
+
+      continueBtn.addEventListener('click', function() {
+        window.location.href = 'intervention.html';
+      });
+
+      startOverBtn.addEventListener('click', function() {
+        if (confirm('Are you sure you want to start over? All your previous responses will be cleared.')) {
+          localStorage.removeItem('sfsc_data');
+          createNewSession();
+          window.location.href = 'intervention.html';
+        }
       });
 
       // --- Interactive SVG wave lines ---

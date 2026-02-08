@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /intervention.html
+
+Sitemap: http://selfcompassionforshame.selenamado.com/sitemap.xml

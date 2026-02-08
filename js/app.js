@@ -38,6 +38,7 @@
   // --- State ---
   var currentTab = 'stage1';
   var saveTimer = null;
+  var INFO_TABS = ['therapists', 'resources'];
 
   // --- Helpers ---
   function getData() {
@@ -134,6 +135,10 @@
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
+  function isInfoTab(tab) {
+    return INFO_TABS.indexOf(tab) !== -1;
+  }
+
   // --- Tab Switching ---
   function switchTab(tab) {
     currentTab = tab;
@@ -148,9 +153,21 @@
       s.style.display = s.id === tab ? '' : 'none';
     });
 
-    // Show the saved step
-    var step = getCurrentStep();
-    showStep(step);
+    var stepNav = document.querySelector('.step-nav');
+    var progressBar = document.querySelector('.progress-bar');
+
+    if (isInfoTab(tab)) {
+      // Hide step nav and progress bar for info tabs
+      stepNav.style.display = 'none';
+      progressBar.style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      stepNav.style.display = '';
+      progressBar.style.display = '';
+      // Show the saved step
+      var step = getCurrentStep();
+      showStep(step);
+    }
   }
 
   // --- Fear Checkbox Logic ---
@@ -297,6 +314,56 @@
     });
   }
 
+  // --- Reset Buttons ---
+  function resetStage(stageName) {
+    var data = getData();
+    // Keep only currentStep reset to 1, clear all other fields
+    data[stageName] = { currentStep: 1 };
+    saveData(data);
+
+    // Clear form fields for this stage
+    document.querySelectorAll('[data-field^="' + stageName + '."]').forEach(function (el) {
+      if (el.type === 'range') {
+        el.value = 50;
+        var valEl = document.getElementById(el.id + 'Val');
+        if (valEl) valEl.textContent = '50';
+      } else {
+        el.value = '';
+      }
+    });
+
+    // Clear fear checkboxes if resetting stage2
+    if (stageName === 'stage2') {
+      document.querySelectorAll('.fear-input').forEach(function (cb) {
+        cb.checked = false;
+        var item = cb.closest('.fear-item');
+        item.classList.remove('fear-item--selected');
+        item.querySelector('.fear-explanation').style.display = 'none';
+      });
+    }
+
+    switchTab(stageName);
+  }
+
+  function initResetButtons() {
+    var s1Reset = document.getElementById('s1_reset');
+    if (s1Reset) {
+      s1Reset.addEventListener('click', function () {
+        if (confirm('Are you sure you want to reset Stage 1? All your responses for this stage will be cleared.')) {
+          resetStage('stage1');
+        }
+      });
+    }
+    var s2Reset = document.getElementById('s2_reset');
+    if (s2Reset) {
+      s2Reset.addEventListener('click', function () {
+        if (confirm('Are you sure you want to reset Stage 2? All your responses for this stage will be cleared.')) {
+          resetStage('stage2');
+        }
+      });
+    }
+  }
+
   // --- "Continue to Stage 2" button ---
   function initStageSwitch() {
     var s1GoBtn = document.getElementById('s1_goToStage2');
@@ -341,6 +408,7 @@
     initNav();
     initStageSwitch();
     initSecondPdfBtn();
+    initResetButtons();
 
     // Show initial tab and step
     switchTab(currentTab);

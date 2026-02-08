@@ -196,6 +196,13 @@ body {
   margin-bottom: 1.75rem;
 }
 
+.landing__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 /* ===== Buttons ===== */
 .btn {
   font-family: var(--font-heading);
@@ -285,7 +292,7 @@ body {
 .tabs {
   display: flex;
   gap: 0.5rem;
-  padding: 1rem 1.5rem 0;
+  padding: 1rem 1.5rem 1.5rem;
   background: var(--white);
   justify-content: center;
   flex-wrap: wrap;
@@ -312,6 +319,12 @@ body {
 
 .tab:hover:not(.tab--active) {
   background: var(--lavender-light);
+}
+
+.tab--home {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 /* ===== Progress Bar ===== */
@@ -590,6 +603,72 @@ body {
   font-size: 0.88rem;
   font-weight: 600;
   text-align: center;
+}
+
+/* ===== Reset Button ===== */
+.reset-btn {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* ===== Info Pages (For Therapists, Resources) ===== */
+.info-page h2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  color: var(--charcoal);
+}
+
+.info-page h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--charcoal);
+}
+
+.info-page .text-block ul {
+  margin: 0.5rem 0 0.85rem 1.5rem;
+}
+
+.info-page .text-block li {
+  margin-bottom: 0.5rem;
+}
+
+.info-page .text-block hr {
+  border: none;
+  border-top: 1px solid var(--lavender);
+  margin: 1rem 0;
+}
+
+.info-page .text-block a {
+  color: #6B6BA0;
+  text-decoration: underline;
+}
+
+.info-page .text-block a:hover {
+  color: var(--charcoal);
+}
+
+.resource-list {
+  list-style: none;
+  margin-left: 0 !important;
+  padding-left: 0;
+}
+
+.resource-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--lavender-tint);
+}
+
+.resource-list li:last-child {
+  border-bottom: none;
+}
+
+.feedback-template {
+  border-left-color: var(--pale-yellow);
+  background: var(--yellow-light);
 }
 
 /* ===== Step Navigation ===== */

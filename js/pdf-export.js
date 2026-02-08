@@ -21,6 +21,10 @@
   }
 
   function generatePdf() {
+    if (!window.jspdf || !window.jspdf.jsPDF) {
+      alert('PDF library is still loading. Please wait a moment and try again.');
+      return;
+    }
     var jsPDF = window.jspdf.jsPDF;
     var doc = new jsPDF({ unit: 'mm', format: 'a4' });
 
