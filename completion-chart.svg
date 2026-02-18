@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 510" width="700" height="510">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="700" height="510" fill="#FAFAFA"/>
+
+  <!-- Title -->
+  <text x="350" y="36" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="20" font-weight="700" fill="#2D2D2D">Assessment Completion Rates</text>
+
+  <!-- Y-axis -->
+  <line x1="100" y1="70" x2="100" y2="350" stroke="#C5C6E8" stroke-width="1"/>
+  <!-- Y-axis labels and gridlines -->
+  <text x="90" y="354" text-anchor="end" font-family="Lato, DM Sans, sans-serif" font-size="12" fill="#888">0%</text>
+  <line x1="100" y1="350" x2="620" y2="350" stroke="#E8E8F5" stroke-width="1"/>
+
+  <text x="90" y="284" text-anchor="end" font-family="Lato, DM Sans, sans-serif" font-size="12" fill="#888">25%</text>
+  <line x1="100" y1="280" x2="620" y2="280" stroke="#E8E8F5" stroke-width="1"/>
+
+  <text x="90" y="214" text-anchor="end" font-family="Lato, DM Sans, sans-serif" font-size="12" fill="#888">50%</text>
+  <line x1="100" y1="210" x2="620" y2="210" stroke="#E8E8F5" stroke-width="1"/>
+
+  <text x="90" y="144" text-anchor="end" font-family="Lato, DM Sans, sans-serif" font-size="12" fill="#888">75%</text>
+  <line x1="100" y1="140" x2="620" y2="140" stroke="#E8E8F5" stroke-width="1"/>
+
+  <text x="90" y="74" text-anchor="end" font-family="Lato, DM Sans, sans-serif" font-size="12" fill="#888">100%</text>
+  <line x1="100" y1="70" x2="620" y2="70" stroke="#E8E8F5" stroke-width="1"/>
+
+  <!-- X-axis -->
+  <line x1="100" y1="350" x2="620" y2="350" stroke="#C5C6E8" stroke-width="1"/>
+
+  <!-- === Post-Intervention Group === -->
+  <text x="245" y="378" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#2D2D2D">Post-Intervention</text>
+  <text x="245" y="396" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="12" fill="#666">(2 weeks)</text>
+  <text x="245" y="420" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="13" fill="#2D2D2D">Overall: 69.1% (n = 65)</text>
+
+  <!-- SF-SC bar: 65.3% -->
+  <rect x="170" y="167" width="70" height="183" rx="4" fill="#3D3E7C" filter="url(#shadow)"/>
+  <text x="205" y="157" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#3D3E7C">65.3%</text>
+  <text x="205" y="195" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="11" fill="#FFFFFF">(n = 32)</text>
+
+  <!-- Waitlist bar: 73.3% -->
+  <rect x="250" y="145" width="70" height="205" rx="4" fill="#7B7CB8" filter="url(#shadow)"/>
+  <text x="285" y="135" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#7B7CB8">73.3%</text>
+  <text x="285" y="175" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="11" fill="#FFFFFF">(n = 33)</text>
+
+  <!-- === Follow-Up Group === -->
+  <text x="475" y="378" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#2D2D2D">Follow-Up</text>
+  <text x="475" y="396" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="12" fill="#666">(1 month)</text>
+  <text x="475" y="420" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="13" fill="#2D2D2D">Overall: 64.9% (n = 61)</text>
+
+  <!-- SF-SC bar: 65.3% -->
+  <rect x="400" y="167" width="70" height="183" rx="4" fill="#3D3E7C" filter="url(#shadow)"/>
+  <text x="435" y="157" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#3D3E7C">65.3%</text>
+  <text x="435" y="195" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="11" fill="#FFFFFF">(n = 32)</text>
+
+  <!-- Waitlist bar: 64.4% -->
+  <rect x="480" y="170" width="70" height="180" rx="4" fill="#7B7CB8" filter="url(#shadow)"/>
+  <text x="515" y="160" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#7B7CB8">64.4%</text>
+  <text x="515" y="198" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="11" fill="#FFFFFF">(n = 29)</text>
+
+  <!-- Legend -->
+  <rect x="240" y="468" width="16" height="16" rx="3" fill="#3D3E7C"/>
+  <text x="264" y="481" font-family="Lato, DM Sans, sans-serif" font-size="13" fill="#2D2D2D">SF-SC</text>
+  <rect x="340" y="468" width="16" height="16" rx="3" fill="#7B7CB8"/>
+  <text x="364" y="481" font-family="Lato, DM Sans, sans-serif" font-size="13" fill="#2D2D2D">Waitlist</text>
+
+</svg>

@@ -388,9 +388,13 @@
 
   // --- Init ---
   function init() {
-    // Check session exists
+    // Check for ?tab= query parameter early
+    var urlParams = new URLSearchParams(window.location.search);
+    var tabParam = urlParams.get('tab');
+
+    // Check session exists (skip redirect for info tabs like therapists/resources)
     var data = getData();
-    if (!data.sessionId) {
+    if (!data.sessionId && !(tabParam && isInfoTab(tabParam))) {
       window.location.href = 'index.html';
       return;
     }
@@ -409,6 +413,11 @@
     initStageSwitch();
     initSecondPdfBtn();
     initResetButtons();
+
+    // Open to specified tab if passed via URL
+    if (tabParam && document.getElementById(tabParam)) {
+      currentTab = tabParam;
+    }
 
     // Show initial tab and step
     switchTab(currentTab);

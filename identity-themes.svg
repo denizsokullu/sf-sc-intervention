@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 540" width="1300" height="540">
+  <defs>
+    <filter id="shadow" x="-2%" y="-2%" width="104%" height="108%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.06"/>
+    </filter>
+  </defs>
+
+  <!-- Subtle background -->
+  <rect x="0" y="0" width="1300" height="540" fill="#FAFAFA"/>
+
+  <!-- Title -->
+  <text x="650" y="36" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="22" font-weight="700" fill="#2D2D2D">Participant Response Themes: Identity &amp; Culture</text>
+
+  <!-- ========== LEFT COLUMN ========== -->
+
+  <!-- Card 1: Language & Cultural Competence — h=98 -->
+  <rect x="30" y="64" width="605" height="98" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="30" y="64" width="6" height="98" rx="3" fill="#3D3E7C"/>
+  <text x="52" y="90" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#3D3E7C">Language &amp; Cultural Competence</text>
+  <text x="52" y="112" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">&#x201C;When I first came to the United States, my English was very poor</text>
+  <text x="52" y="128" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">and my accent was very strong, whenever people don&#x2019;t understand</text>
+  <text x="52" y="144" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">or laugh at the English I speak, I feel a little ashamed.&#x201D;</text>
+
+  <!-- Card 2: Intersecting Marginalized Identities — h=98 -->
+  <rect x="30" y="174" width="605" height="98" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="30" y="174" width="6" height="98" rx="3" fill="#7B7CB8"/>
+  <text x="52" y="200" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#7B7CB8">Intersecting Marginalized Identities</text>
+  <text x="52" y="222" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">&#x201C;I&#x2019;m a minority in a lot of ways, racial, ethnic, gender identity,</text>
+  <text x="52" y="238" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">sexuality. That alone has generated shame due to feeling</text>
+  <text x="52" y="254" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">like an outsider.&#x201D;</text>
+
+  <!-- Card 3: Navigating Biracial Identity — h=82 -->
+  <rect x="30" y="284" width="605" height="82" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="30" y="284" width="6" height="82" rx="3" fill="#3D3E7C"/>
+  <text x="52" y="310" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#3D3E7C">Navigating Biracial Identity</text>
+  <text x="52" y="332" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">&#x201C;It feels like I should always be ashamed or hide one part</text>
+  <text x="52" y="348" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">of my identity inorder to fit in.&#x201D;</text>
+
+  <!-- Card 4: Gender Identity & Sexuality — h=130 -->
+  <rect x="30" y="378" width="605" height="130" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="30" y="378" width="6" height="130" rx="3" fill="#7B7CB8"/>
+  <text x="52" y="404" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#7B7CB8">Gender Identity &amp; Sexuality</text>
+  <text x="52" y="426" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">&#x201C;I think it has to a lot to do with my gender identity, being</text>
+  <text x="52" y="442" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">transgender. I am just so self conscious and aware of every</text>
+  <text x="52" y="458" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">gesture and action I do. I think in this moment, I felt like I have</text>
+  <text x="52" y="474" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">to prove I&#x2019;m a good person because of the stigma surrounding</text>
+  <text x="52" y="490" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">transgender people.&#x201D;</text>
+
+  <!-- ========== RIGHT COLUMN ========== -->
+
+  <!-- Card 5: Family Norms — h=114 -->
+  <rect x="665" y="64" width="605" height="114" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="665" y="64" width="6" height="114" rx="3" fill="#3D3E7C"/>
+  <text x="687" y="90" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#3D3E7C">Family Norms</text>
+  <text x="687" y="112" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">&#x201C;I have always known shame to be a silent burden. I have rarely</text>
+  <text x="687" y="128" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">ever discussed my feelings of shame specifically... I feel this is due</text>
+  <text x="687" y="144" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">to how my family rarely shares their true experiences or feelings</text>
+  <text x="687" y="160" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">with one another. There&#x2019;s always a front to be displayed.&#x201D;</text>
+
+  <!-- Card 6: Cultural Expectation — h=114 -->
+  <rect x="665" y="190" width="605" height="114" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="665" y="190" width="6" height="114" rx="3" fill="#7B7CB8"/>
+  <text x="687" y="216" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#7B7CB8">Cultural Expectation</text>
+  <text x="687" y="238" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">&#x201C;This experience of shame is connected to my Asian identity.</text>
+  <text x="687" y="254" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">My family and society have reinforced the ideas that I should be</text>
+  <text x="687" y="270" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">intelligent, especially in academics. In this experience, I did not</text>
+  <text x="687" y="286" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">feel intelligent and was experiencing shame from that.&#x201D;</text>
+
+  <!-- Card 7: Gender Societal Expectations — h=148 -->
+  <rect x="665" y="316" width="605" height="148" rx="12" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="665" y="316" width="6" height="148" rx="3" fill="#3D3E7C"/>
+  <text x="687" y="342" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#3D3E7C">Gender Societal Expectations</text>
+  <text x="687" y="364" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">&#x201C;The feeling of being belittled and patronized by a man in a space</text>
+  <text x="687" y="380" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">that&#x2019;s often male-dominated resonates with the societal expectations</text>
+  <text x="687" y="396" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">and stereotypes that women often face... Growing up in a patriarchal</text>
+  <text x="687" y="412" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">society, I&#x2019;ve internalized the message that women are often expected</text>
+  <text x="687" y="428" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">to be submissive, nurturing, and receptive, rather than assertive,</text>
+  <text x="687" y="444" font-family="Lato, DM Sans, sans-serif" font-size="12" font-style="italic" fill="#444">confident, and powerful.&#x201D;</text>
+
+</svg>

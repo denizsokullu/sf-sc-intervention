@@ -126,6 +126,21 @@ body {
   line-height: 1.7;
 }
 
+.landing__therapist-link {
+  font-size: 0.88rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+}
+
+.landing__therapist-link a {
+  color: #6B6BA0;
+  text-decoration: underline;
+}
+
+.landing__therapist-link a:hover {
+  color: #3D3E7C;
+}
+
 .landing__privacy {
   font-size: 0.82rem;
   color: #888;
@@ -133,42 +148,88 @@ body {
   font-style: italic;
 }
 
-.landing__details {
+.landing__info {
   text-align: left;
   margin-bottom: 1.25rem;
   width: 100%;
 }
 
-.landing__details-toggle {
+.landing__section-title {
   font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.92rem;
-  color: #6B6BA0;
-  cursor: pointer;
-  padding: 0.5rem 0;
-  list-style: none;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--charcoal);
+  margin-bottom: 0.75rem;
+}
+
+.landing__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.landing__step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--lavender-tint);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+
+.landing__step-icon {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--white);
+  background: var(--lavender);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.landing__step-content {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  line-height: 1.5;
+}
+
+.landing__step-desc {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.15rem;
+}
+
+.landing__tips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.landing__tip {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: #555;
+  background: var(--white);
+  border: 1px solid var(--lavender);
+  border-radius: 20px;
+  padding: 0.35rem 0.75rem;
 }
 
-.landing__details-toggle::-webkit-details-marker {
-  display: none;
-}
-
-.landing__details-toggle::before {
-  content: '\25B6';
-  font-size: 0.65rem;
-  transition: transform 0.2s ease;
-  display: inline-block;
-}
-
-.landing__details[open] .landing__details-toggle::before {
-  transform: rotate(90deg);
-}
-
-.landing__details-content {
-  padding-top: 0.5rem;
+.landing__tip-icon {
+  font-size: 0.9rem;
 }
 
 .landing__detail-item {
@@ -670,6 +731,7 @@ body {
   border-left-color: var(--pale-yellow);
   background: var(--yellow-light);
 }
+
 
 /* ===== Step Navigation ===== */
 .step-nav {

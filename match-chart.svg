@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 544" width="420" height="544">
+  <text x="210" y="30" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="16" font-weight="bold" fill="#2D2D2D">How Well Did the Intervention Match Your Needs?</text>
+  <g transform="translate(10, 20)">
+    <path d="M 200,210 L 200.0,60.0 A 150,150 0 0,1 344.6,170.0 Z" fill="#3D3E7C" stroke="#fff" stroke-width="2"/><path d="M 200,210 L 344.6,170.0 A 150,150 0 1,1 67.2,140.2 Z" fill="#7B7CB8" stroke="#fff" stroke-width="2"/><path d="M 200,210 L 67.2,140.2 A 150,150 0 0,1 199.1,60.0 Z" fill="#B8B9DE" stroke="#fff" stroke-width="2"/>
+    <text x="254.5" y="138.4" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">20.7%</text><text x="190.4" y="299.5" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">62.0%</text><text x="153.2" y="133.1" text-anchor="middle" dominant-baseline="central" font-family="DM Sans, sans-serif" font-size="15" font-weight="bold" fill="#2D2D2D">17.2%</text>
+  </g>
+  <rect x="40" y="430" width="18" height="18" rx="3" fill="#3D3E7C"/><text x="66" y="444" font-family="DM Sans, sans-serif" font-size="13" fill="#2D2D2D">Extremely good to perfect match (20.7%, n=6)</text><rect x="40" y="458" width="18" height="18" rx="3" fill="#7B7CB8"/><text x="66" y="472" font-family="DM Sans, sans-serif" font-size="13" fill="#2D2D2D">Moderately to very good match (62.0%, n=18)</text><rect x="40" y="486" width="18" height="18" rx="3" fill="#B8B9DE"/><text x="66" y="500" font-family="DM Sans, sans-serif" font-size="13" fill="#2D2D2D">Poor to somewhat good match (17.2%, n=5)</text>
+  <text x="210" y="524" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="13" fill="#666">M = 6.17, SD = 1.62 (9-point scale)</text>
+</svg>

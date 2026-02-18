@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="760" height="480">
+  <defs>
+    <filter id="shadow" x="-3%" y="-3%" width="106%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-opacity="0.1"/>
+    </filter>
+    <marker id="arrowLeft" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto-start-reverse">
+      <polygon points="10 0, 0 3.5, 10 7" fill="#7B7CB8"/>
+    </marker>
+    <marker id="arrowRight" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7B7CB8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="760" height="480" fill="#FAFAFA"/>
+
+  <!-- Title -->
+  <text x="380" y="38" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="20" font-weight="700" fill="#2D2D2D">Changes in Self-Compassion &#x2194; Changes in Shame</text>
+
+  <!-- Left box: Self-Compassion -->
+  <rect x="60" y="120" width="220" height="160" rx="16" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="60" y="120" width="220" height="48" rx="16" fill="#3D3E7C"/>
+  <rect x="60" y="144" width="220" height="24" fill="#3D3E7C"/>
+  <text x="170" y="152" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="15" font-weight="700" fill="#FFFFFF">Self-Compassion</text>
+  <text x="170" y="210" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="40" fill="#4CAF50">&#x2191;</text>
+  <text x="170" y="258" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#2E7D32">Increased</text>
+
+  <!-- Right box: ESS -->
+  <rect x="480" y="80" width="220" height="110" rx="16" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="480" y="80" width="220" height="48" rx="16" fill="#7B7CB8"/>
+  <rect x="480" y="104" width="220" height="24" fill="#7B7CB8"/>
+  <text x="590" y="112" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">External Shame (ESS)</text>
+  <text x="590" y="156" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="30" fill="#C62828">&#x2193;</text>
+  <text x="590" y="178" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#C62828">Decreased</text>
+
+  <!-- Right box: EISS -->
+  <rect x="480" y="210" width="220" height="110" rx="16" fill="#FFFFFF" filter="url(#shadow)"/>
+  <rect x="480" y="210" width="220" height="48" rx="16" fill="#B8B9DE"/>
+  <rect x="480" y="234" width="220" height="24" fill="#B8B9DE"/>
+  <text x="590" y="240" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#2D2D2D">Internal/External Shame (EISS)</text>
+  <text x="590" y="286" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="30" fill="#C62828">&#x2193;</text>
+  <text x="590" y="308" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="13" font-weight="700" fill="#C62828">Decreased</text>
+
+  <!-- Correlation lines -->
+  <line x1="280" y1="175" x2="480" y2="135" stroke="#7B7CB8" stroke-width="2.5" stroke-dasharray="6,4" marker-start="url(#arrowLeft)" marker-end="url(#arrowRight)"/>
+  <rect x="338" y="136" width="96" height="28" rx="14" fill="#FFFFFF" stroke="#C5C6E8" stroke-width="1.5"/>
+  <text x="386" y="155" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#3D3E7C">r = -.36*</text>
+
+  <line x1="280" y1="220" x2="480" y2="265" stroke="#7B7CB8" stroke-width="2.5" stroke-dasharray="6,4" marker-start="url(#arrowLeft)" marker-end="url(#arrowRight)"/>
+  <rect x="338" y="228" width="96" height="28" rx="14" fill="#FFFFFF" stroke="#C5C6E8" stroke-width="1.5"/>
+  <text x="386" y="247" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#3D3E7C">r = -.41*</text>
+
+  <!-- Significance note -->
+  <text x="380" y="365" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="12" fill="#666">* p &lt; .05, moderate correlations</text>
+
+  <!-- Bottom summary box -->
+  <rect x="80" y="390" width="600" height="64" rx="12" fill="#E8E8F5" stroke="#C5C6E8" stroke-width="1.5"/>
+  <text x="380" y="418" text-anchor="middle" font-family="Lato, DM Sans, sans-serif" font-size="14" fill="#2D2D2D">As self-compassion increased, all dimensions of shame decreased,</text>
+  <text x="380" y="440" text-anchor="middle" font-family="Quicksand, DM Sans, sans-serif" font-size="14" font-weight="700" fill="#3D3E7C">supporting self-compassion as an active mechanism of change.</text>
+
+</svg>
